@@ -5,12 +5,11 @@ class UiHelper {
     return Image.asset("assets/images/$img");
   }
 
-  static CustomText(
-      {required String text,
-      required Color color,
-      required FontWeight fontWeight,
-      String? fontfamily,
-      required double fontSize}) {
+  static CustomText({required String text,
+    required Color color,
+    required FontWeight fontWeight,
+    String? fontfamily,
+    required double fontSize}) {
     return Text(
       text,
       style: TextStyle(
@@ -23,7 +22,7 @@ class UiHelper {
 
   //here creating textfld
 
-static CustomTextField({required TextEditingController controller, }){
+  static CustomTextField({required TextEditingController controller,}) {
     return Container(
       height: 37,
       width: 360,
@@ -35,20 +34,20 @@ static CustomTextField({required TextEditingController controller, }){
         ),
       ),
       child: TextField(
-        controller: controller,
-        decoration: InputDecoration(
-          hintText: "Search 'ice-cream'",
-          prefixIcon: Image.asset("assets/images/search.png"),
-          suffixIcon: Image.asset("assets/images/mic 1.png"),
-          border: InputBorder.none,
+          controller: controller,
+          decoration: InputDecoration(
+            hintText: "Search 'ice-cream'",
+            prefixIcon: Image.asset("assets/images/search.png"),
+            suffixIcon: Image.asset("assets/images/mic 1.png"),
+            border: InputBorder.none,
 
-        )
+          )
       ),
     );
-}
+  }
 
 
-  static CustomButton(VoidCallback callback){
+  static CustomButton(VoidCallback callback) {
     return Container(
       height: 18,
       width: 30,
@@ -59,8 +58,9 @@ static CustomTextField({required TextEditingController controller, }){
           ),
           borderRadius: BorderRadius.circular(4)
       ),
-      child: Center(child: Text("Add",style: TextStyle(fontSize: 8,color: Color(0XFF27AF34)),),),
+      child: Center(child: Text(
+        "Add", style: TextStyle(fontSize: 10, color: Color(0XFF27AF34)),),),
     );
   }
-
+}
 
